@@ -1,3 +1,10 @@
+Takım 2 'ye ait çalışmadır.
+Eliz Kurtuluş
+Abdullah Yavuz
+Yaşar Eren
+Ferdanur Armutlu
+
+
 Ödev: Mini-ATM (menü tabanlı konsoluygulaması)
 
 Hedef:

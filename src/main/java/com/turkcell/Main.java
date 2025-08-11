@@ -63,6 +63,7 @@ public class Main {
                 case 3:
                     //bakiye görüntüleme
                     System.out.println("Bakiye:" + balance);
+                    SurekliMenu();
                     break;
                 case 4:
                     //fatura öde
@@ -85,6 +86,7 @@ public class Main {
                     return;
                 default:
                     System.out.println("Yanlış bir numara seçtiniz! (Seçiminiz 1-5 arasında olmalıdır.)");
+                    SurekliMenu();
                     break;//geçersiz değerler
             }
         }
@@ -93,31 +95,37 @@ public class Main {
     public static void deposit(double amount ){
         if(amount<=0){
             System.out.println("Geçersiz bir tutar girdiniz!");
+            SurekliMenu();
             return;
         }
         balance+=amount;
         System.out.println("Hesabınıza " + amount + " TL başarıyla yatırıldı. Yeni hesap bakiyesi: " + balance);
         sumDeposits++;
+        SurekliMenu();
     }
     public static void withdraw(double amount ){
         if(amount<=0){
             System.out.println("Geçersiz bir tutar girdiniz!");
+            SurekliMenu();
             return;
         }
         double komisyon = amount > 5000 ? amount * 0.02 : 0;
         double sumAmount  = amount + komisyon;
         if(sumAmount >balance){
             System.out.println("Bu işlemi yapabilmek için hesabınızda yeterli bakiye bulunmamaktadır!");
+            SurekliMenu();
             return;
         }
 
         balance-=sumAmount;
         System.out.println("Hesabınızdan " + amount + " TL para çekildi. Bu işlem için kesilen komisyon: "+komisyon+" TL Yeni hesap bakiyesi : "+balance);
         sumWithdraws++;
+        SurekliMenu();
     }
     public static void payBill(int billType,double amount ){
         if(amount<=0){
             System.out.println("Geçersiz bir tutar girdiniz!");
+            SurekliMenu();
             return;
         }
         double indirim=0;
@@ -137,16 +145,19 @@ public class Main {
                 break;
             default:
                 System.out.println("Geçersiz bir fatura türü seçtiniz! (Elektrik, Su veya İnternet Faturaları Seçilebilir!");
+                SurekliMenu();
                 return;
         }
         double payAmount = amount - indirim;
         if(payAmount > balance){
             System.out.println("Bu işlemi yapabilmek için hesabınızda yeterli bakiye bulunmamaktadır!");
+            SurekliMenu();
             return;
         }
         balance-=payAmount;
         sumBillCount++;
         System.out.println("Fatura ödeme başarıyla gerçekleştirildi! Fatura için uygulanan indirim: " +indirim+ " TL Ödenen tutar: "+payAmount + " TL");
+        SurekliMenu();
     }
     public static void printSummary(){
         System.out.println("---- Çıkış Raporu ----");

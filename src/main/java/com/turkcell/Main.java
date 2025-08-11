@@ -12,7 +12,7 @@ import java.util.Scanner; // Kullanıcıdan veri alabilmek için Scanner sınıf
 public class Main { // Main sınıfını tanımlıyoruz.
     private static final String username = "user";   // Sabit kullanıcı bilgilerini belirliyoruz. Final kullanarak bu bilgileri sabit hale getiriyoruz.
     private static final String password = "1234";
-    
+
     private static double balance = 0.0; // ATM bilgilerini static ile tüm metodlarda erişilebilir yapıyoruz.
     private static int sumDeposits = 0;
     private static int sumWithdraws = 0;
@@ -31,7 +31,7 @@ public class Main { // Main sınıfını tanımlıyoruz.
                 SurekliMenu(); // Başarılı bir girişte menüyü açıyoruz.
                 a=3; //Döngünün sonlanması için a değerini 3 yapıyoruz.
             } else {
-                int b = 3 - a; //Başarısız girişte kalan deneme hakkını hesaplıyoruz. 
+                int b = 3 - a; //Başarısız girişte kalan deneme hakkını hesaplıyoruz.
                 System.out.println("Kullanıcı adı veya şifre hatalı! Kalan deneme hakkı:" +b);
             }
         }
@@ -53,15 +53,38 @@ public class Main { // Main sınıfını tanımlıyoruz.
                     System.out.println("Yatırılacak Para Tutarını Giriniz:");
                     double depositAmount=scanner.nextDouble(); // Tutarı okuyoruz.
                     deposit(depositAmount); // Para yatırma metodunu çağırıyoruz.
+                    System.out.println("\n" + " --------------- Ana Menü --------------- ");
+                    System.out.println(" | 1- Para Yatır                        | ███╗░░░███╗██╗███╗░░██╗██╗  ░█████╗░████████╗███╗░░░███╗");
+                    System.out.println(" | 2- Para Çek                          | ████╗░████║██║████╗░██║██║  ██╔══██╗╚══██╔══╝████╗░████║");
+                    System.out.println(" | 3- Bakiye Görüntüle                  | ██╔████╔██║██║██╔██╗██║██║  ███████║░░░██║░░░██╔████╔██║");
+                    System.out.println(" | 4- Fatura Öde (Elektrik/Su/İnternet) | ██║╚██╔╝██║██║██║╚████║██║  ██╔══██║░░░██║░░░██║╚██╔╝██║");
+                    System.out.println(" | 5- Çıkış                             | ██║░╚═╝░██║██║██║░╚███║██║  ██║░░██║░░░██║░░░██║░╚═╝░██║");
+                    System.out.println(" ---------------------------------------- ╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═╝  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░░░░╚═╝");
+                    System.out.println("Yapmak istediğiniz işlemin numarasını girin. (Seçiminiz 1-5 arasında olmalıdır.)");
                     break; // Switch'ten çıkıyoruz.
                 case 2: // Para çekme seçeneği
                     System.out.println("Çekilecek Para Tutarını Giriniz:");
                     double withdrawAmount=scanner.nextDouble(); // Tutarı okuyoruz.
                     withdraw(withdrawAmount); // Para çekme metodunu çağırıyoruz.
+                    System.out.println("\n" + " --------------- Ana Menü --------------- ");
+                    System.out.println(" | 1- Para Yatır                        | ███╗░░░███╗██╗███╗░░██╗██╗  ░█████╗░████████╗███╗░░░███╗");
+                    System.out.println(" | 2- Para Çek                          | ████╗░████║██║████╗░██║██║  ██╔══██╗╚══██╔══╝████╗░████║");
+                    System.out.println(" | 3- Bakiye Görüntüle                  | ██╔████╔██║██║██╔██╗██║██║  ███████║░░░██║░░░██╔████╔██║");
+                    System.out.println(" | 4- Fatura Öde (Elektrik/Su/İnternet) | ██║╚██╔╝██║██║██║╚████║██║  ██╔══██║░░░██║░░░██║╚██╔╝██║");
+                    System.out.println(" | 5- Çıkış                             | ██║░╚═╝░██║██║██║░╚███║██║  ██║░░██║░░░██║░░░██║░╚═╝░██║");
+                    System.out.println(" ---------------------------------------- ╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═╝  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░░░░╚═╝");
+                    System.out.println("Yapmak istediğiniz işlemin numarasını girin. (Seçiminiz 1-5 arasında olmalıdır.)");
                     break; // Switch'ten çıkıyoruz.
                 case 3: // Bakiye görüntüleme seçeneği
                     System.out.println("Bakiye:" + balance); // Mevcut bakiyeyi gösteriyoruz.
-                    SurekliMenu(); // Ana menüyü tekrar gösteriyoruz.
+                    System.out.println("\n" + " --------------- Ana Menü --------------- ");
+                    System.out.println(" | 1- Para Yatır                        | ███╗░░░███╗██╗███╗░░██╗██╗  ░█████╗░████████╗███╗░░░███╗");
+                    System.out.println(" | 2- Para Çek                          | ████╗░████║██║████╗░██║██║  ██╔══██╗╚══██╔══╝████╗░████║");
+                    System.out.println(" | 3- Bakiye Görüntüle                  | ██╔████╔██║██║██╔██╗██║██║  ███████║░░░██║░░░██╔████╔██║");
+                    System.out.println(" | 4- Fatura Öde (Elektrik/Su/İnternet) | ██║╚██╔╝██║██║██║╚████║██║  ██╔══██║░░░██║░░░██║╚██╔╝██║");
+                    System.out.println(" | 5- Çıkış                             | ██║░╚═╝░██║██║██║░╚███║██║  ██║░░██║░░░██║░░░██║░╚═╝░██║");
+                    System.out.println(" ---------------------------------------- ╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═╝  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░░░░╚═╝");
+                    System.out.println("Yapmak istediğiniz işlemin numarasını girin. (Seçiminiz 1-5 arasında olmalıdır.)");
                     break; // Switch'ten çıkıyoruz.
                 case 4: // Fatura ödeme seçeneği
                     System.out.println("Fatura Menüsü :");
@@ -73,15 +96,29 @@ public class Main { // Main sınıfını tanımlıyoruz.
                     System.out.println("Ödeyeceğiniz Fatura Tutarını Giriniz:");
                     double billAmount = scanner.nextDouble(); // Tutarı okuyoruz.
                     payBill(billType, billAmount); // Fatura ödeme metodunu çağırıyoruz.
+                    System.out.println("\n" + " --------------- Ana Menü --------------- ");
+                    System.out.println(" | 1- Para Yatır                        | ███╗░░░███╗██╗███╗░░██╗██╗  ░█████╗░████████╗███╗░░░███╗");
+                    System.out.println(" | 2- Para Çek                          | ████╗░████║██║████╗░██║██║  ██╔══██╗╚══██╔══╝████╗░████║");
+                    System.out.println(" | 3- Bakiye Görüntüle                  | ██╔████╔██║██║██╔██╗██║██║  ███████║░░░██║░░░██╔████╔██║");
+                    System.out.println(" | 4- Fatura Öde (Elektrik/Su/İnternet) | ██║╚██╔╝██║██║██║╚████║██║  ██╔══██║░░░██║░░░██║╚██╔╝██║");
+                    System.out.println(" | 5- Çıkış                             | ██║░╚═╝░██║██║██║░╚███║██║  ██║░░██║░░░██║░░░██║░╚═╝░██║");
+                    System.out.println(" ---------------------------------------- ╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═╝  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░░░░╚═╝");
+                    System.out.println("Yapmak istediğiniz işlemin numarasını girin. (Seçiminiz 1-5 arasında olmalıdır.)");
                     break; // Switch'ten çıkıyoruz.
 
                 case 5: // Çıkış seçeneği
                     printSummary(); // Çıkış raporu yazdırıyoruz.
-                    scanner.close(); // Scanner'ı kapatıyoruz.
                     return; // Programı sonlandırıyoruz.
                 default: // Geçersiz seçim durumu
                     System.out.println("Yanlış bir numara seçtiniz! (Seçiminiz 1-5 arasında olmalıdır.)");
-                    SurekliMenu(); // Ana menüyü tekrar gösteriyoruz.
+                    System.out.println("\n" + " --------------- Ana Menü --------------- ");
+                    System.out.println(" | 1- Para Yatır                        | ███╗░░░███╗██╗███╗░░██╗██╗  ░█████╗░████████╗███╗░░░███╗");
+                    System.out.println(" | 2- Para Çek                          | ████╗░████║██║████╗░██║██║  ██╔══██╗╚══██╔══╝████╗░████║");
+                    System.out.println(" | 3- Bakiye Görüntüle                  | ██╔████╔██║██║██╔██╗██║██║  ███████║░░░██║░░░██╔████╔██║");
+                    System.out.println(" | 4- Fatura Öde (Elektrik/Su/İnternet) | ██║╚██╔╝██║██║██║╚████║██║  ██╔══██║░░░██║░░░██║╚██╔╝██║");
+                    System.out.println(" | 5- Çıkış                             | ██║░╚═╝░██║██║██║░╚███║██║  ██║░░██║░░░██║░░░██║░╚═╝░██║");
+                    System.out.println(" ---------------------------------------- ╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═╝  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░░░░╚═╝");
+                    System.out.println("Yapmak istediğiniz işlemin numarasını girin. (Seçiminiz 1-5 arasında olmalıdır.)");
                     break; // Switch'ten çıkıyoruz.
             }
         }
@@ -90,37 +127,31 @@ public class Main { // Main sınıfını tanımlıyoruz.
     public static void deposit(double amount ){ // Para yatırma metodunu double amount parametresi ile tanımlıyoruz.
         if(amount<=0){ // Negatif veya 0 kontrolü yapıyoruz.
             System.out.println("Geçersiz bir tutar girdiniz!");
-            SurekliMenu(); // Ana menüyü tekrar gösteriyoruz.
             return; // Metodu sonlandırıyoruz.
         }
         balance+=amount; // Bakiyeye tutarı ekliyoruz.
         System.out.println("Hesabınıza " + amount + " TL başarıyla yatırıldı. Yeni hesap bakiyesi: " + balance);
         sumDeposits++; // Para yatırma işlemi sayısını 1 artırıyoruz.
-        SurekliMenu(); // Ana menüyü tekrar gösteriyoruz.
     }
     public static void withdraw(double amount ){ // Para çekme metodunu double amount parametresi ile tanımlıyoruz.
         if(amount<=0){ // Negatif veya 0 kontrolü yapıyoruz.
             System.out.println("Geçersiz bir tutar girdiniz!");
-            SurekliMenu(); // Ana menüyü tekrar gösteriyoruz.
             return; // Metodu sonlandırıyoruz.
         }
         double komisyon = amount > 5000 ? amount * 0.02 : 0; // Komisyon hesaplaması yapıyoruz. Komisyon hesaplarken ternary operatör kullanıyoruz.
         double sumAmount  = amount + komisyon; // Komisyon ile birlikte toplam çekilecek tutarı hesaplıyoruz.
         if(sumAmount >balance){ // Para çekebilmek için bakiye kontrolü yapıyoruz.
             System.out.println("Bu işlemi yapabilmek için hesabınızda yeterli bakiye bulunmamaktadır!");
-            SurekliMenu(); // Ana menüyü tekrar gösteriyoruz.
             return; // Metodu sonlandırıyoruz.
         }
 
         balance-=sumAmount; // Bakiyeden toplam çekilecek tutarı çıkarıyoruz.
         System.out.println("Hesabınızdan " + amount + " TL para çekildi. Bu işlem için kesilen komisyon: "+komisyon+" TL Yeni hesap bakiyesi : "+balance);
         sumWithdraws++; // Para çekme işlemi sayısını 1 arttırıyoruz.
-        SurekliMenu(); // Ana menüyü tekrar gösteriyoruz.
     }
     public static void payBill(int billType,double amount ){ // int billType ve double amount parametreleriyle fatura ödeme metodunu tanımlıyoruz.
         if(amount<=0){ // Negatif veya 0 kontrolü yapıyoruz.
             System.out.println("Geçersiz bir tutar girdiniz!");
-            SurekliMenu(); // Ana menüyü tekrar gösteriyoruz.
             return; // Metodu sonlandırıyoruz.
         }
         double indirim=0;
@@ -140,19 +171,16 @@ public class Main { // Main sınıfını tanımlıyoruz.
                 break; // Switch'ten çıkıyoruz.
             default: // Geçersiz fatura türü
                 System.out.println("Geçersiz bir fatura türü seçtiniz! (Elektrik, Su veya İnternet Faturaları Seçilebilir!");
-                SurekliMenu(); // Ana menüyü tekrar gösteriyoruz.
                 return;  // Metodu sonlandırıyoruz.
         }
         double payAmount = amount - indirim; // İndirimli tutarı hesaplıyoruz.
         if(payAmount > balance){ // Fatura ödeme yapabilmek için bakiye kontrolü yapıyoruz.
             System.out.println("Bu işlemi yapabilmek için hesabınızda yeterli bakiye bulunmamaktadır!");
-            SurekliMenu(); // Ana menüyü tekrar gösteriyoruz.
             return; // Metodu sonlandırıyoruz.
         } else {
             balance-=payAmount; // Bakiyeden indirimli tutarı çıkarıyoruz.
             sumBillCount++; // Fatura ödeme işlem sayısını 1 arttırıyoruz.
             System.out.println("Fatura ödeme başarıyla gerçekleştirildi! Fatura için uygulanan indirim: " +indirim+ " TL Ödenen tutar: "+payAmount + " TL");
-            SurekliMenu(); // Ana menüyü tekrar gösteriyoruz.
         }
     }
     public static void printSummary(){ // Özet yazdırma metodunu tanımlıyoruz.

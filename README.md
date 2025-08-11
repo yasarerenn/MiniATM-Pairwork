@@ -16,19 +16,19 @@ Değişkenler, operatörler, döngüler, koşul blokları ve fonksiyonları tek 
   5- Çıkış
   • Seçim dışı girişte uyarı verip menüye dönün (do-while veya continue).
 
-3. Fonksiyonlar (method’lar) zorunlu
+4. Fonksiyonlar (method’lar) zorunlu
   • deposit(double amount) : void
   • withdraw(double amount) : void (bakiye yetersizse çekme)
   • payBill(int billType, double amount) : void
   • printSummary() : void (çıkışta istatistik)
   • Her biri giriş doğrulaması yapmalı (negatif tutar, 0, vs. reddedilsin).
 
-4. Operatörler ve küçük kurallar
+5. Operatörler ve küçük kurallar
   • Para çekmede 5000’den büyük tutarlara %2 komisyon uygulayın(komisyon = amount > 5000 ? amount * 0.02 : 0).
   • Faturalarda Elektrik %5 indirim, Su %3, İnternet %2.(indirim sonra bakiyeden düşsün.)
   • İşlem sayaçları tutun: totalDeposit, totalWithdraw,totalBillsPaidCount.
 
-5. Çıkışta Özet
+6. Çıkışta Özet
    • Bakiye, toplam yatırılan, toplam çekilen, ödenen fatura adedi ve net hareketiyazdırın.
 
 Kabul Kriterleri (tik listesi):

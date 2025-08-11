@@ -1,7 +1,10 @@
 Takım 2 'ye ait çalışmadır.
 Eliz Kurtuluş
+
 Abdullah Yavuz
+
 Yaşar Eren
+
 Ferdanur Armutlu
 
 
